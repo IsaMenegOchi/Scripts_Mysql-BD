@@ -465,4 +465,6 @@ values ("Ferenc Árpád Darabont", "1959-01-28", 'Frank Darabont', ' É o autor 
 "A Hora do Pesadelo 3", "A Mosca 2" e "Frankenstein de Mary Shelley".- Trabalhou como 
 roteirista na série de TV norte-americana "O Jovem Indiana Jones".', 'fotoDiretor1', 2);
 	#FOREST GUMP
+    
+    select * from tblRoteirista
 
