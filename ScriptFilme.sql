@@ -466,5 +466,52 @@ values ("Ferenc Árpád Darabont", "1959-01-28", 'Frank Darabont', ' É o autor 
 roteirista na série de TV norte-americana "O Jovem Indiana Jones".', 'fotoDiretor1', 2);
 	#FOREST GUMP
     
-    select * from tblRoteirista
+    select * from tblRoteirista;
+    
+    select * from tblNacionalidade;
+    
+insert into tblNacionalidade (nome) values ('Americano');
+insert into tblNacionalidade (nome) values ('Brasileiro');
+insert into tblNacionalidade (nome) values ('Espanhol');
 
+ select * from tblAtor;
+select * from tblIntermFilmeAtor;
+	
+select * from tblIntermNacionalidadeAtor;
+insert into tblIntermNacionalidadeAtor (idNacionalidade, idAtor) values (2, 3);
+insert into tblIntermNacionalidadeAtor (idNacionalidade, idAtor) values (2, 4);
+insert into tblIntermNacionalidadeAtor (idNacionalidade, idAtor) values (2, 5);
+insert into tblIntermNacionalidadeAtor (idNacionalidade, idAtor) values (1, 6);
+insert into tblIntermNacionalidadeAtor (idNacionalidade, idAtor) values (1, 7);
+insert into tblIntermNacionalidadeAtor (idNacionalidade, idAtor) values (1, 8);
+insert into tblIntermNacionalidadeAtor (idNacionalidade, idAtor) values (1, 9);
+insert into tblIntermNacionalidadeAtor (idNacionalidade, idAtor) values (1, 10);
+insert into tblIntermNacionalidadeAtor (idNacionalidade, idAtor) values (1, 11);
+insert into tblIntermNacionalidadeAtor (idNacionalidade, idAtor) values (1, 12);
+insert into tblIntermNacionalidadeAtor (idNacionalidade, idAtor) values (1, 13);
+
+
+
+select * from tblAtor;
+select * from tblIntermFilmeAtor;
+insert into tblIntermFilmeAtor (idFilme, idAtor) values (2, 3);
+insert into tblIntermFilmeAtor (idFilme, idAtor) values (2, 4);
+insert into tblIntermFilmeAtor (idFilme, idAtor) values (2, 5);
+
+insert into tblIntermFilmeAtor (idFilme, idAtor) values (1, 6);
+insert into tblIntermFilmeAtor (idFilme, idAtor) values (1, 7);
+insert into tblIntermFilmeAtor (idFilme, idAtor) values (1, 8);
+
+insert into tblIntermFilmeAtor (idFilme, idAtor) values (3, 9);
+insert into tblIntermFilmeAtor (idFilme, idAtor) values (3, 11);
+insert into tblIntermFilmeAtor (idFilme, idAtor) values (3, 12);
+
+insert into tblIntermFilmeAtor (idFilme, idAtor) values (4, 9);
+insert into tblIntermFilmeAtor (idFilme, idAtor) values (4, 10);
+insert into tblIntermFilmeAtor (idFilme, idAtor) values (4, 13);
+show tables;
+
+select * from tblFilme;
+select * from tblGeneroFilme;
+select * from tblIntermGeneroFilme;
+insert into tblIntermGeneroFilme (idFilme, idGeneroFilme) values (4, 13);
