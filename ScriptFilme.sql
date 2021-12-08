@@ -289,7 +289,10 @@ WHERE
 INSERT INTO tblGeneroFilme (nome) VALUES ('Drama');
 
 #Inserção de multiplos valores
+select * from tblgenerofilme;
 INSERT INTO tblGeneroFilme (nome) VALUES ('Aventura'), ('Animação'), ('Musical'), ('Policial'), ('Fantasia'), ('Policial'), ('Ação'), ('Terror'); 
+insert into tblgenerofilme(nome) values ('Romance');
+insert into tblgenerofilme(nome) values ('Comédia');
 SELECT * FROM tblGeneroFilme;
 
 INSERT INTO tblClasificacao (nome) VALUES ('+10'), ('+12'), ('+14'), ('+18'), ('+16'), ('Livre');  
@@ -468,11 +471,14 @@ roteirista na série de TV norte-americana "O Jovem Indiana Jones".', 'fotoDiret
     
     select * from tblRoteirista;
     
-    select * from tblNacionalidade;
-    
+select * from tblNacionalidade;
 insert into tblNacionalidade (nome) values ('Americano');
 insert into tblNacionalidade (nome) values ('Brasileiro');
 insert into tblNacionalidade (nome) values ('Espanhol');
+insert into tblNacionalidade(nome) values('Francês');
+insert into tblNacionalidade(nome) values('Italiano');
+insert into tblNacionalidade(nome) values('Japonês');
+
 
  select * from tblAtor;
 select * from tblIntermFilmeAtor;
@@ -509,9 +515,114 @@ insert into tblIntermFilmeAtor (idFilme, idAtor) values (3, 12);
 insert into tblIntermFilmeAtor (idFilme, idAtor) values (4, 9);
 insert into tblIntermFilmeAtor (idFilme, idAtor) values (4, 10);
 insert into tblIntermFilmeAtor (idFilme, idAtor) values (4, 13);
-show tables;
 
+
+select * from tblintermgenerofilme;
+insert into tblintermgenerofilme(idFilme, idGeneroFilme) values (3, 1);
+insert into tblintermgenerofilme(idFilme, idGeneroFilme) values (3, 11);
+insert into tblintermgenerofilme(idFilme, idGeneroFilme) values (3, 12);
+insert into tblintermgenerofilme(idFilme, idGeneroFilme) values (4, 5);
+insert into tblintermgenerofilme(idFilme, idGeneroFilme) values (4, 6);
+
+
+select * from tbldiretor;
+insert into tblDiretor(nome, dataNascimento, nomeArtistico, biografia, foto, idGeneroPessoa) values ('Ferenc Árpád Darabont', '1959-01-28','Frank Darabont', 
+'- É o autor dos roteiros de "A Hora do Pesadelo 3", "A Mosca 2" e "Frankenstein de Mary Shelley".- Trabalhou como roteirista na série de TV norte-americana "O Jovem Indiana Jones".',
+ "fotoDiretor3", 2);
+ insert into tblDiretor(nome, dataNascimento, nomeArtistico, biografia, foto, idGeneroPessoa) values ('Robert Lee Zemeckis', '1952-05-14','Robert Zemeckis', '- Especialista em efeitos especiais, Robert Zemeckis é um dos partidários dos filmes do também diretor Steven Spielberg, que já produziu vários de seus filmes;
+- Trabalhando geralmente com seu parceiro de roteiros Bob Gale, os primeiros filmes de Robert apresentou ao público seu talento para comédias tipo pastelão, como Tudo por uma Esmeralda (1984); 1941 - Uma Guerra Muito Louca (1979) e, acrescentando efeitos muito especiais em Uma Cilada para Roger Rabbit (1988) e De Volta para o Futuro (1985);
+- Apesar destes filmes terem sidos feitos meramente para o puro entretenimento, com raros desenvolvimentos dos personagens ou mesmo com uma trama cuidadosa, eles são diversão na certa;
+- Seus filmes posteriores no entanto, se tornaram mais sérios e reflexivos, como o enormemente bem sucedido filme estrelado por Tom Hanks Forrest Gump (1994) e o filme estrelado por Jodie Foster Contato (1997), ambos aclamados pela crítica e novamente reunindo atordoantes efeitos especiais;
+- Em 2000 o diretor retorna ao trabalho com mais dois filmes: Revelação, com Michelle Pfeiffer e Harrison Ford, e Náufrago, em que retoma a parceria com Tom Hanks;
+- Com isso, ao longo de sua carreira Robert tem provado que pode trabalhar em uma trama séria cercada de efeitos especiais, façanha esta que muitos diretores não conseguem realizar, e também conquistar crítica e público alternando os mais variados estilos de filmes;
+- Seus filmes quase sempre são produzidos por Steven Spielberg;
+- Tem Bob Gale como companheiro de escrita nos roteiros;
+- Adora fazer citações a cenas famosas de outros filmes;
+- É formado na Escola de Cinema da Universidade de Southern California', 'fotoDiretor4', 2);
+
+select * from tblintermnacionalidadediretor;
+select * from tblnacionalidade;
+select * from tblDiretor;
+insert into tblIntermNacionalidadediretor(idNacionalidade, idDiretor) values(1,1);
+insert into tblIntermNacionalidadediretor(idNacionalidade, idDiretor) values(1,2);
+insert into tblIntermNacionalidadediretor(idNacionalidade, idDiretor) values(1,3);
+insert into tblIntermNacionalidadediretor(idNacionalidade, idDiretor) values(4,3);
+insert into tblIntermNacionalidadediretor(idNacionalidade, idDiretor) values(1,4);
+
+#frank dara - americano/frances - um sonho de liberdade / a espera de um milagre
+#roger aller - americano - rei leão
+#rob minof - americano - rei leão
+#ROBERT ZEMECKIS - americano - forest gump
+
+select * from tblfilmediretor;
+select * from tblDiretor;
 select * from tblFilme;
-select * from tblGeneroFilme;
-select * from tblIntermGeneroFilme;
-insert into tblIntermGeneroFilme (idFilme, idGeneroFilme) values (4, 13);
+insert into tblfilmediretor(idFilme, idDiretor) values(1,3);
+insert into tblfilmediretor(idFilme, idDiretor) values(2,1);
+insert into tblfilmediretor(idFilme, idDiretor) values(2,2);
+insert into tblfilmediretor(idFilme, idDiretor) values(3,4);
+insert into tblfilmediretor(idFilme, idDiretor) values(4,3);
+
+select * from tblestudio;
+insert into tblestudio(nome) values ('Warner Bros. Pictures');
+insert into tblestudio(nome) values ('Paramount');
+insert into tblestudio(nome) values ('Walt Disney Animation Studios');
+insert into tblestudio(nome) values ('Colombia');
+
+select * from tblintermfilmeestudio;
+insert into tblintermfilmeestudio(idFilme, idEstudio) values (1, 4);
+insert into tblintermfilmeestudio(idFilme, idEstudio) values (2, 3);
+insert into tblintermfilmeestudio(idFilme, idEstudio) values (3, 2);
+insert into tblintermfilmeestudio(idFilme, idEstudio) values (4, 1);
+
+
+select * from tblroteirista;
+insert into tblRoteirista(nome, idGeneroPessoa) values ('Ferenc Árpád Darabont', 2); #americano/frances - a espera de uma milagre/um sonho de liberdade
+insert into tblRoteirista(nome, idGeneroPessoa) values ('Stephen Edwin King', 2); #americano - a espera de um milagre/um sonho de liberdade
+insert into tblRoteirista(nome, idGeneroPessoa) values ('Linda Woolverton', 1);#americana - rei leao
+insert into tblRoteirista(nome, idGeneroPessoa) values ('Lorna Cook', 1); #americana - rei leão
+insert into tblRoteirista(nome, idGeneroPessoa) values ('Eric R. Roth', 2); #americano/forest gump
+
+select * from tblintermnacinalidaderoteirista;
+select * from tblnacionalidade;
+select * from tblroteirista;
+insert into tblintermnacinalidaderoteirista(idNacionalidade, idRoteirista) values (1,1);
+insert into tblintermnacinalidaderoteirista(idNacionalidade, idRoteirista) values (4,1);
+insert into tblintermnacinalidaderoteirista(idNacionalidade, idRoteirista) values (1,2);
+insert into tblintermnacinalidaderoteirista(idNacionalidade, idRoteirista) values (1,3);
+insert into tblintermnacinalidaderoteirista(idNacionalidade, idRoteirista) values (1,4);
+insert into tblintermnacinalidaderoteirista(idNacionalidade, idRoteirista) values (1,5);
+
+select * from tblintermfilmeroteirista;
+select * from tblroteirista;
+select * from tblFilme;
+insert into tblintermfilmeroteirista(idfilme, idRoteirista) values (1,1);
+insert into tblintermfilmeroteirista(idfilme, idRoteirista) values (1,2);
+insert into tblintermfilmeroteirista(idfilme, idRoteirista) values (2,3);
+insert into tblintermfilmeroteirista(idfilme, idRoteirista) values (2,4);
+insert into tblintermfilmeroteirista(idfilme, idRoteirista) values (3,5);
+insert into tblintermfilmeroteirista(idfilme, idRoteirista) values (4,1);
+insert into tblintermfilmeroteirista(idfilme, idRoteirista) values (4,2);
+
+#verificando se estão prontos
+show tables;
+select * from tblator;
+select * from tblclasificacao;
+select * from tbldiretor;
+select * from tblestudio;
+select * from tblfilme;
+select * from tblfilmediretor;
+select * from tblgenerofilme;
+select * from tblgeneropessoa;
+select * from tblintermfilmeator;
+select * from tblintermfilmeestudio;
+select * from tblintermfilmeroteirista;
+select * from tblintermgenerofilme;
+select * from tblintermnacinalidaderoteirista;
+select * from tblintermnacionalidadeator;
+select * from tblintermnacionalidadediretor;
+select * from tblnacionalidade;
+select * from tblroteirista;
+
+
+
