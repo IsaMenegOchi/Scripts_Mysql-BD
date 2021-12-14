@@ -1,6 +1,6 @@
 #Comentário linha
 /*Comentário em bloco*/
-create database dbFilmesTurmaB;
+create database dbFilmesTurmaBIsabelle;
 
 #Permite visualizar os databases existentes no BD
 show databases;
@@ -11,7 +11,7 @@ drop database nomeDB;
 /*Seleciona o database a ser utilizado
 	primeira coisa a fazermos quando formos mexer no banco
 */
-use dbFilmesTurmaB;
+use dbFilmesTurmaBIsabelle;
 
 #TABELAS PRINCIPAIS
 
@@ -264,8 +264,8 @@ idIntermFilmeAtor int not null auto_increment primary key,
 		drop foreign key FK_Genero_Ator;
 		
 	#drop column - permite apagar um atributo
-	alter table tblAtor
-		drop column idGeneroPessoa;
+	#alter table tblAtor
+		#drop column idGeneroPessoa;
 
 
 	desc tblAtor;
@@ -279,7 +279,6 @@ SELECT
 FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
 WHERE 
 	REFERENCED_TABLE_NAME = 'tblFilme';
-    
     
 #INSERTS, UPDATES E DELETES
 
@@ -335,7 +334,7 @@ mercado negro da instituição.',
  'foto02.png', 
  6);
  
- INSERT INTO tblIntermGeneroFilme (idFilme, idGeneroFilme) VALUES (1,1), (2,2), (2,3), (2,4);
+INSERT INTO tblIntermGeneroFilme (idFilme, idGeneroFilme) VALUES (1,1), (2,2), (2,3), (2,4);
 
 select * from tblIntermGeneroFilme;
 
@@ -347,7 +346,7 @@ select * from tblIntermGeneroFilme;
 #where - criterio do que exatamente queremos mudar
 UPDATE tblFilme set duracao = '03:00:00' WHERE idFilme = 1;
 #fazer com que a coluna de data relancamento seja nulo
-UPDATE tblFilme set dataRelancamento = null;
+#UPDATE tblFilme set dataRelancamento = null;
 
 #delete - apaga a alinha inteira
 DELETE  FROM tblGeneroFilme WHERE idGeneroFilme = 10; 
